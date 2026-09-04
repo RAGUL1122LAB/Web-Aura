@@ -42,8 +42,8 @@ body {
    AUTHENTIC GTA: SAN ANDREAS GLOBAL GAME CURSOR — ALL PAGES & COMPONENTS
    ========================================================================= */
 
-html, body, #root {
-  cursor: url('/cursors/gta-cursor.png') 0 0, url('/cursors/gta-sa-cursor.svg') 0 0, auto !important;
+html, body, #root, * {
+  cursor: url('/cursors/gta-cursor.png') 0 0, url('/cursors/gta-cursor.svg') 0 0, auto !important;
 }
 
 /* Default non-interactive elements inherit the custom game cursor */
@@ -58,7 +58,7 @@ select, summary, label[for],
 [tabindex]:not([tabindex="-1"]), 
 .cursor-pointer, [class*="cursor-pointer"],
 [onClick], [onclick] {
-  cursor: url('/cursors/gta-pointer.png') 0 0, url('/cursors/gta-sa-pointer.svg') 0 0, pointer !important;
+  cursor: url('/cursors/gta-pointer.png') 0 0, url('/cursors/gta-pointer.svg') 0 0, pointer !important;
 }
 
 /* Children inside interactive elements inherit the pointer state */

@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Changa+One:ital@0;1&family=Oswald:wght@400;600;700&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+      html, body, #root, * {
+        cursor: url('/cursors/gta-cursor.png') 0 0, url('/cursors/gta-cursor.svg') 0 0, auto;
+      }
+      a, button, [role="button"], input[type="button"], input[type="submit"], select, summary, label[for], .cursor-pointer, [class*="cursor-pointer"], [onClick], [onclick] {
+        cursor: url('/cursors/gta-pointer.png') 0 0, url('/cursors/gta-pointer.svg') 0 0, pointer !important;
+      }
+      input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], textarea, [contenteditable="true"] {
+        cursor: text !important;
+      }
+      button:disabled, input:disabled, [aria-disabled="true"], .cursor-not-allowed {
+        cursor: not-allowed !important;
+      }
+    </style>
   </head>
   <body class="bg-gta-black text-gta-black selection:bg-gta-orange selection:text-gta-black antialiased">
     <div id="root"></div>
