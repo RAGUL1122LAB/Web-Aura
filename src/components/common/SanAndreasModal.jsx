@@ -27,16 +27,16 @@ export default function SanAndreasModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/80">
       <div 
-        className={`w-full ${maxWidth} bg-gta-beige border-4 border-gta-black gta-box-shadow-lg relative animate-none`}
+        className={`w-full ${maxWidth} bg-gta-beige border-3 sm:border-4 border-gta-black gta-box-shadow-lg relative animate-none`}
         role="dialog"
         aria-modal="true"
       >
         {/* Header */}
-        <div className="bg-gta-black px-4 py-3 border-b-3 border-gta-black flex items-center justify-between">
+        <div className="bg-gta-black px-3.5 sm:px-4 py-2.5 sm:py-3 border-b-3 border-gta-black flex items-center justify-between">
           <div>
-            <h3 className="font-gta-condensed text-2xl uppercase tracking-wider font-bold text-white leading-none">
+            <h3 className="font-gta-condensed text-xl sm:text-2xl uppercase tracking-wider font-bold text-white leading-none">
               {title}
             </h3>
             {subtitle && (
@@ -47,7 +47,7 @@ export default function SanAndreasModal({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 bg-gta-red text-white font-bold border-2 border-white hover:bg-red-700 flex items-center justify-center text-sm"
+            className="w-8 h-8 bg-gta-red text-white font-bold border-2 border-white hover:bg-red-700 flex items-center justify-center text-sm cursor-pointer shrink-0"
             aria-label="Close modal"
           >
             ✕
@@ -55,7 +55,7 @@ export default function SanAndreasModal({
         </div>
 
         {/* Content */}
-        <div className="p-5 max-h-[80vh] overflow-y-auto">
+        <div className="p-3.5 sm:p-5 max-h-[85vh] overflow-y-auto">
           {children}
         </div>
       </div>

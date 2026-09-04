@@ -69,9 +69,13 @@ export default function LeaderboardTable({ showScoresOverride = false }) {
         </span>
       </div>
 
-      {/* Responsive Table Container */}
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse font-gta-condensed">
+      {/* Responsive Table Container with Mobile Scroll Hint */}
+      <div className="sm:hidden px-3 py-1.5 bg-gta-black text-[11px] font-gta-condensed font-bold text-gta-orange uppercase tracking-wider flex items-center justify-between border-b border-gta-gray">
+        <span>↔ SWIPE HORIZONTALLY FOR ALL COLUMNS</span>
+        <span className="text-gta-green font-mono">TOTAL: 100</span>
+      </div>
+      <div className="overflow-x-auto w-full">
+        <table className="w-full min-w-[640px] text-left border-collapse font-gta-condensed">
           <thead>
             <tr className="bg-gta-brown text-gta-tan-light border-b-3 border-gta-black uppercase text-base sm:text-lg tracking-wider">
               <th className="py-2.5 px-4 text-center w-16">RANK</th>

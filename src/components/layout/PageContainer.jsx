@@ -7,8 +7,8 @@ import React from 'react';
 
 export default function PageContainer({ children, className = '' }) {
   return (
-    <main className={`min-h-[85vh] bg-gta-black py-6 sm:py-8 px-3 sm:px-4 ${className}`}>
-      <div className="max-w-6xl mx-auto">
+    <main className={`min-h-[85vh] bg-gta-black py-4 sm:py-8 px-2.5 sm:px-4 ${className}`}>
+      <div className="max-w-6xl mx-auto w-full">
         {children}
       </div>
     </main>

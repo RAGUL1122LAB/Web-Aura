@@ -231,11 +231,12 @@ export default function ScoreCard({ team, evaluatorId, onScoreSaved }) {
           {isSaved ? '★ Previously Submitted — You can update marks anytime' : '★ Ready for evaluation entry'}
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap w-full sm:w-auto">
           <SanAndreasButton
             variant="tan"
             size="md"
             onClick={() => handleSubmit(true)}
+            className="w-full sm:w-auto justify-center"
           >
             SAVE DRAFT
           </SanAndreasButton>
@@ -243,6 +244,7 @@ export default function ScoreCard({ team, evaluatorId, onScoreSaved }) {
             variant="orange"
             size="md"
             onClick={() => handleSubmit(false)}
+            className="w-full sm:w-auto justify-center"
           >
             SUBMIT EVALUATION ({calculatedTotal}/50)
           </SanAndreasButton>

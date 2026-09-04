@@ -75,10 +75,10 @@ export default function ParticipantDashboard() {
       <div className="space-y-6 select-none">
         
         {/* Top Participant Welcome Banner */}
-        <div className="border-3 border-gta-black bg-gta-black text-white p-4 sm:p-6 gta-box-shadow">
-          <div className="flex items-center justify-between flex-wrap gap-4 border-b-2 border-gta-orange pb-3 mb-3">
+        <div className="border-3 border-gta-black bg-gta-black text-white p-3.5 sm:p-6 gta-box-shadow">
+          <div className="flex items-center justify-between flex-wrap gap-3 border-b-2 border-gta-orange pb-3 mb-3">
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs bg-gta-orange text-gta-black font-gta-condensed font-black px-2 py-0.5 uppercase tracking-widest">
                   PARTICIPANT TERMINAL
                 </span>
@@ -86,7 +86,7 @@ export default function ParticipantDashboard() {
                   {currentUser?.email}
                 </span>
               </div>
-              <h1 className="font-gta-title text-3xl sm:text-5xl text-white gta-text-shadow leading-none tracking-tight mt-1">
+              <h1 className="font-gta-title text-2xl sm:text-4xl md:text-5xl text-white gta-text-shadow leading-tight sm:leading-none tracking-tight mt-1">
                 WELCOME, {currentUser?.name?.toUpperCase() || 'DEVELOPER'}
               </h1>
             </div>

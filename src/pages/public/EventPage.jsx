@@ -27,12 +27,12 @@ export default function EventPage() {
               <span className="text-xs bg-gta-orange text-gta-black font-gta-condensed font-black px-2 py-0.5 uppercase tracking-widest">
                 OFFICIAL COMPETITION DIRECTIVE
               </span>
-              <h1 className="font-gta-title text-3xl sm:text-5xl text-white gta-text-shadow leading-none tracking-tight mt-1">
+              <h1 className="font-gta-title text-2xl sm:text-4xl md:text-5xl text-white gta-text-shadow leading-tight sm:leading-none tracking-tight mt-1">
                 WEB AURA 2K26 RULES & ROUNDS
               </h1>
             </div>
-            <div className="text-right">
-              <div className="font-gta-hud text-xl text-gta-green font-bold">
+            <div className="text-left sm:text-right">
+              <div className="font-gta-hud text-lg sm:text-xl text-gta-green font-bold">
                 7 SEPTEMBER 2026 @ 9:00 AM
               </div>
               <div className="text-xs font-gta-condensed font-bold text-gta-tan uppercase tracking-wider">
@@ -53,17 +53,17 @@ export default function EventPage() {
           {/* Round 1 Card */}
           <div className="border-3 border-gta-black bg-gta-beige gta-box-shadow select-none flex flex-col justify-between">
             <div>
-              <div className="bg-gta-black text-white p-4 border-b-3 border-gta-black flex items-center justify-between">
+              <div className="bg-gta-black text-white p-3 sm:p-4 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
                 <div>
                   <span className="text-[10px] bg-gta-orange text-gta-black font-bold px-1.5 py-0.5 uppercase">
                     STAGE 01
                   </span>
-                  <h3 className="font-gta-condensed text-2xl font-black uppercase text-white tracking-wide mt-1">
+                  <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-white tracking-wide mt-1">
                     ROUND 1: PRESENTATION + FRONTEND
                   </h3>
                 </div>
-                <div className="text-right">
-                  <div className="font-gta-hud text-3xl font-black text-gta-green">
+                <div className="text-left sm:text-right">
+                  <div className="font-gta-hud text-2xl sm:text-3xl font-black text-gta-green">
                     50 MARKS
                   </div>
                   <div className="text-[10px] text-gta-tan uppercase font-bold">
@@ -110,17 +110,17 @@ export default function EventPage() {
           {/* Round 2 Card */}
           <div className="border-3 border-gta-black bg-gta-beige gta-box-shadow select-none flex flex-col justify-between">
             <div>
-              <div className="bg-gta-black text-white p-4 border-b-3 border-gta-black flex items-center justify-between">
+              <div className="bg-gta-black text-white p-3 sm:p-4 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
                 <div>
                   <span className="text-[10px] bg-gta-blue text-white font-bold px-1.5 py-0.5 uppercase">
                     STAGE 02
                   </span>
-                  <h3 className="font-gta-condensed text-2xl font-black uppercase text-white tracking-wide mt-1">
+                  <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-white tracking-wide mt-1">
                     ROUND 2: BACKEND + DB + DEPLOYMENT
                   </h3>
                 </div>
-                <div className="text-right">
-                  <div className="font-gta-hud text-3xl font-black text-gta-green">
+                <div className="text-left sm:text-right">
+                  <div className="font-gta-hud text-2xl sm:text-3xl font-black text-gta-green">
                     50 MARKS
                   </div>
                   <div className="text-[10px] text-gta-tan uppercase font-bold">
@@ -167,17 +167,17 @@ export default function EventPage() {
         </div>
 
         {/* Competition Mark Distribution Summary */}
-        <div className="border-3 border-gta-black bg-gta-tan-light p-4 sm:p-5 gta-box-shadow select-none">
-          <div className="flex items-center justify-between flex-wrap gap-4 border-b-2 border-gta-black pb-3 mb-3">
+        <div className="border-3 border-gta-black bg-gta-tan-light p-3.5 sm:p-5 gta-box-shadow select-none">
+          <div className="flex items-center justify-between flex-wrap gap-3 border-b-2 border-gta-black pb-3 mb-3">
             <div>
-              <h3 className="font-gta-condensed text-2xl font-black uppercase text-gta-black">
+              <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-gta-black leading-tight">
                 OVERALL MARK DISTRIBUTION & JURY BENCHMARK
               </h3>
               <p className="text-xs font-bold text-gta-brown uppercase">
                 STRICT 100-POINT SYSTEM • COMPETITION RANKINGS
               </p>
             </div>
-            <div className="font-gta-hud text-3xl sm:text-4xl font-black text-gta-black bg-gta-orange px-3 py-1 border-2 border-gta-black">
+            <div className="font-gta-hud text-2xl sm:text-4xl font-black text-gta-black bg-gta-orange px-3 py-1 border-2 border-gta-black">
               100 MARKS TOTAL
             </div>
           </div>

@@ -153,25 +153,25 @@ export default function LoginPage() {
               <p className="text-xs font-gta-condensed font-bold uppercase tracking-wider text-gta-brown mb-2 text-center">
                 ★ QUICK TEST ROLES (CLICK TO FILL) ★
               </p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <button
                   type="button"
                   onClick={() => fillDemoAccount('participant@webaura.internal', 'password123')}
-                  className="px-2 py-1 bg-gta-black text-gta-orange border border-black font-gta-condensed text-xs font-bold uppercase hover:bg-gta-brown"
+                  className="min-h-[40px] px-2 py-1.5 bg-gta-black text-gta-orange border border-black font-gta-condensed text-xs sm:text-sm font-bold uppercase hover:bg-gta-brown flex items-center justify-center cursor-pointer select-none"
                 >
                   PARTICIPANT
                 </button>
                 <button
                   type="button"
                   onClick={() => fillDemoAccount('evaluator@webaura.internal', 'evalPass2026')}
-                  className="px-2 py-1 bg-gta-blue text-white border border-black font-gta-condensed text-xs font-bold uppercase hover:bg-blue-800"
+                  className="min-h-[40px] px-2 py-1.5 bg-gta-blue text-white border border-black font-gta-condensed text-xs sm:text-sm font-bold uppercase hover:bg-blue-800 flex items-center justify-center cursor-pointer select-none"
                 >
                   EVALUATOR
                 </button>
                 <button
                   type="button"
                   onClick={() => fillDemoAccount('admin@webaura.internal', 'adminSecret2026')}
-                  className="px-2 py-1 bg-gta-red text-white border border-black font-gta-condensed text-xs font-bold uppercase hover:bg-red-800"
+                  className="min-h-[40px] px-2 py-1.5 bg-gta-red text-white border border-black font-gta-condensed text-xs sm:text-sm font-bold uppercase hover:bg-red-800 flex items-center justify-center cursor-pointer select-none"
                 >
                   ADMIN
                 </button>

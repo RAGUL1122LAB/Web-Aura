@@ -20,9 +20,9 @@ export default function ScoreVisibilityControls() {
 
   return (
     <div className="border-3 border-gta-black bg-gta-beige p-4 gta-box-shadow select-none">
-      <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between">
+      <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
         <div>
-          <h4 className="font-gta-condensed text-2xl font-black uppercase text-white leading-none">
+          <h4 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-white leading-none">
             SCORE BROADCAST VISIBILITY
           </h4>
           <p className="font-gta-condensed text-xs uppercase tracking-widest text-gta-orange mt-0.5">

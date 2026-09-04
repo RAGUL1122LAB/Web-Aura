@@ -23,16 +23,16 @@ export default function PodiumBanner() {
   const thirdPlace = winners.find(w => w.rank === 3) || winners[2];
 
   return (
-    <div className="border-4 border-gta-black bg-gta-black text-white p-4 sm:p-6 gta-box-shadow-lg mb-8 select-none">
+    <div className="border-3 sm:border-4 border-gta-black bg-gta-black text-white p-3.5 sm:p-6 gta-box-shadow-lg mb-6 sm:mb-8 select-none">
       {/* Respect + / Mission Passed Header */}
-      <div className="text-center pb-4 border-b-3 border-gta-orange mb-6">
-        <div className="inline-block bg-gta-green text-gta-black font-gta-condensed font-black text-sm sm:text-base px-3 py-1 border-2 border-gta-black uppercase tracking-widest mb-2">
+      <div className="text-center pb-3 sm:pb-4 border-b-2 sm:border-b-3 border-gta-orange mb-4 sm:mb-6">
+        <div className="inline-block bg-gta-green text-gta-black font-gta-condensed font-black text-xs sm:text-base px-2.5 sm:px-3 py-1 border-2 border-gta-black uppercase tracking-widest mb-2">
           ★ RESPECT + 100 ★
         </div>
-        <h2 className="font-gta-title text-3xl sm:text-5xl text-gta-orange gta-text-shadow leading-none tracking-tight">
+        <h2 className="font-gta-title text-2xl sm:text-4xl md:text-5xl text-gta-orange gta-text-shadow leading-tight sm:leading-none tracking-tight">
           MISSION PASSED! WINNERS REVEALED
         </h2>
-        <p className="font-gta-condensed text-base sm:text-xl font-bold uppercase tracking-wider text-gta-tan-light mt-1">
+        <p className="font-gta-condensed text-sm sm:text-lg md:text-xl font-bold uppercase tracking-wider text-gta-tan-light mt-1">
           THE CHAMPIONS OF WEB AURA 2K26
         </p>
       </div>
@@ -47,7 +47,7 @@ export default function PodiumBanner() {
               RUNNER UP • 2ND PLACE
             </div>
             <div className="text-3xl mb-1">🥈</div>
-            <h3 className="font-gta-condensed text-2xl font-black uppercase text-gta-orange">
+            <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-gta-orange">
               {secondPlace.teamName}
             </h3>
             <div className="font-mono text-xs text-gta-tan font-bold my-1">
@@ -61,21 +61,21 @@ export default function PodiumBanner() {
 
         {/* 1st Place (Grand Champion) */}
         {firstPlace && (
-          <div className="order-1 md:order-2 border-4 border-gta-yellow bg-gta-orange text-gta-black p-6 text-center gta-box-shadow-lg -mt-2">
-            <div className="bg-gta-black py-1 px-3 border border-black text-sm font-gta-condensed font-black text-gta-yellow uppercase mb-2">
+          <div className="order-1 md:order-2 border-4 border-gta-yellow bg-gta-orange text-gta-black p-4 sm:p-6 text-center gta-box-shadow-lg mt-0 md:-mt-2">
+            <div className="bg-gta-black py-1 px-3 border border-black text-xs sm:text-sm font-gta-condensed font-black text-gta-yellow uppercase mb-2">
               👑 GRAND CHAMPION • 1ST PLACE
             </div>
-            <div className="text-4xl mb-1">🏆</div>
-            <h3 className="font-gta-title text-3xl sm:text-4xl font-black uppercase text-gta-black leading-none">
+            <div className="text-3xl sm:text-4xl mb-1">🏆</div>
+            <h3 className="font-gta-title text-2xl sm:text-3xl md:text-4xl font-black uppercase text-gta-black leading-tight">
               {firstPlace.teamName}
             </h3>
-            <div className="font-mono text-sm text-gta-brown-dark font-black my-1.5">
+            <div className="font-mono text-xs sm:text-sm text-gta-brown-dark font-black my-1 sm:my-1.5">
               {firstPlace.teamId}
             </div>
-            <div className="font-gta-hud text-4xl font-black text-gta-black bg-gta-yellow border-2 border-gta-black py-1 my-2">
+            <div className="font-gta-hud text-3xl sm:text-4xl font-black text-gta-black bg-gta-yellow border-2 border-gta-black py-1 my-2">
               {firstPlace.finalScore} / 100
             </div>
-            <p className="font-gta-condensed text-xs font-black uppercase tracking-wider text-gta-black">
+            <p className="font-gta-condensed text-[11px] sm:text-xs font-black uppercase tracking-wider text-gta-black">
               OUTSTANDING PRESENTATION & CLOUD DEPLOYMENT
             </p>
           </div>

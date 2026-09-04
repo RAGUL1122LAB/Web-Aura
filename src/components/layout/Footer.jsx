@@ -18,35 +18,35 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center gap-6">
         
         {/* Top Bracketed Navigation Links (As seen in reference image) */}
-        <div className="flex items-center justify-center flex-wrap gap-2 text-sm sm:text-base font-gta-condensed uppercase tracking-wider text-gta-orange font-bold">
+        <div className="flex items-center justify-center flex-wrap gap-1 sm:gap-2 text-sm sm:text-base font-gta-condensed uppercase tracking-wider text-gta-orange font-bold text-center">
           <Link 
             to="/about" 
             onClick={handleLinkClick}
-            className="hover:text-white px-1"
+            className="hover:text-white px-2 py-1 min-h-[38px] flex items-center"
           >
             [Contact Webmaster]
           </Link>
-          <span className="text-gta-brown">|</span>
+          <span className="hidden sm:inline text-gta-brown">|</span>
           <Link 
             to="/about" 
             onClick={handleLinkClick}
-            className="hover:text-white px-1"
+            className="hover:text-white px-2 py-1 min-h-[38px] flex items-center"
           >
             [About Web Aura]
           </Link>
-          <span className="text-gta-brown">|</span>
+          <span className="hidden sm:inline text-gta-brown">|</span>
           <a 
             href="#terms" 
             onClick={(e) => { e.preventDefault(); handleLinkClick(); alert("WEB AURA 2K26 Code of Conduct: Strictly original code developed during the hackathon. Zero plagiarism. Respect the Jury decisions."); }}
-            className="hover:text-white px-1"
+            className="hover:text-white px-2 py-1 min-h-[38px] flex items-center"
           >
             [Terms of Service]
           </a>
-          <span className="text-gta-brown">|</span>
+          <span className="hidden sm:inline text-gta-brown">|</span>
           <a 
             href="#privacy" 
             onClick={(e) => { e.preventDefault(); handleLinkClick(); alert("WEB AURA 2K26 Privacy Policy: Participant information is strictly utilized for event credentials, team matching, and certification."); }}
-            className="hover:text-white px-1"
+            className="hover:text-white px-2 py-1 min-h-[38px] flex items-center"
           >
             [Privacy Policy]
           </a>

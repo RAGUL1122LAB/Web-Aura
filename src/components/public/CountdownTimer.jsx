@@ -57,20 +57,20 @@ export default function CountdownTimer() {
 
   return (
     <div className="bg-gta-black border-3 border-gta-orange p-3 sm:p-4 text-white gta-box-shadow select-none">
-      <div className="flex items-center justify-between border-b-2 border-gta-brown pb-2 mb-3">
-        <div className="flex items-center gap-2">
-          <span className="text-gta-orange font-bold text-lg">⏳</span>
-          <h4 className="font-gta-condensed text-lg sm:text-xl font-bold uppercase tracking-wider text-gta-orange">
+      <div className="flex items-center justify-between flex-wrap gap-2 border-b-2 border-gta-brown pb-2 mb-3">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="text-gta-orange font-bold text-base sm:text-lg shrink-0">⏳</span>
+          <h4 className="font-gta-condensed text-base sm:text-xl font-bold uppercase tracking-wider text-gta-orange leading-tight">
             MISSION CLOCK • COUNTDOWN TO KICKOFF
           </h4>
         </div>
-        <span className="text-xs bg-gta-orange text-gta-black font-gta-condensed font-bold px-2 py-0.5 uppercase tracking-wide">
+        <span className="text-[11px] sm:text-xs bg-gta-orange text-gta-black font-gta-condensed font-bold px-2 py-0.5 uppercase tracking-wide shrink-0">
           {EVENT_CONFIG.eventDateDisplay} @ 9:00 AM
         </span>
       </div>
 
       {/* Clock Display Grid */}
-      <div className="grid grid-cols-4 gap-2 text-center">
+      <div className="grid grid-cols-4 gap-1.5 sm:gap-2 text-center">
         <TimeUnit label="DAYS" value={timeLeft.days} />
         <TimeUnit label="HOURS" value={timeLeft.hours} />
         <TimeUnit label="MINS" value={timeLeft.minutes} />
@@ -83,11 +83,11 @@ export default function CountdownTimer() {
 function TimeUnit({ label, value, highlight = false }) {
   const formatted = String(value).padStart(2, '0');
   return (
-    <div className={`p-2 border-2 border-gta-black ${highlight ? 'bg-gta-orange text-gta-black' : 'bg-gta-charcoal text-white'}`}>
-      <div className="font-gta-hud text-2xl sm:text-4xl font-black tracking-widest leading-none">
+    <div className={`p-1.5 sm:p-2 border-2 border-gta-black ${highlight ? 'bg-gta-orange text-gta-black' : 'bg-gta-charcoal text-white'}`}>
+      <div className="font-gta-hud text-xl sm:text-3xl md:text-4xl font-black tracking-wider sm:tracking-widest leading-none">
         {formatted}
       </div>
-      <div className={`font-gta-condensed text-[11px] font-bold uppercase tracking-wider mt-1 ${highlight ? 'text-gta-black' : 'text-gta-tan'}`}>
+      <div className={`font-gta-condensed text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-1 ${highlight ? 'text-gta-black' : 'text-gta-tan'}`}>
         {label}
       </div>
     </div>

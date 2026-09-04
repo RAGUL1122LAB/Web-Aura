@@ -42,30 +42,30 @@ export default function Navbar() {
         </div>
 
         {/* Layer 3: Foreground Header Content (Branding, Center Arch & San Andreas HUD) */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <div className="relative z-10 max-w-6xl mx-auto px-2.5 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
           {/* Left Branding: WEB AURA with Palm Silhouette in San Andreas Style */}
           <Link 
             to="/" 
             onClick={handleNavClick}
-            className="flex items-center gap-2.5 group text-decoration-none"
+            className="flex items-center gap-1.5 sm:gap-2.5 group text-decoration-none min-w-0"
           >
             {/* Stylized Palm Tree Silhouette */}
-            <div className="text-3xl sm:text-4xl text-gta-black font-black leading-none drop-shadow-[2px_2px_0px_#000]">
+            <div className="text-2xl sm:text-3xl md:text-4xl text-gta-black font-black leading-none drop-shadow-[2px_2px_0px_#000] shrink-0">
               🌴
             </div>
-            <div className="flex flex-col justify-center">
-              <span className="font-gta-title text-2xl sm:text-3xl text-white tracking-normal leading-none gta-text-shadow-lg flex items-center gap-1.5">
+            <div className="flex flex-col justify-center min-w-0">
+              <span className="font-gta-title text-xl sm:text-2xl md:text-3xl text-white tracking-normal leading-none gta-text-shadow-lg flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
                 <span>WEB</span>
                 <span>AURA</span>
               </span>
-              <span className="font-diploma text-base sm:text-lg text-white tracking-wider leading-none gta-text-shadow mt-1">
+              <span className="font-diploma text-xs sm:text-sm md:text-lg text-white tracking-wider leading-none gta-text-shadow mt-0.5 sm:mt-1 whitespace-nowrap">
                 San Andreas Edition
               </span>
             </div>
           </Link>
 
           {/* Center Logo: 2K26 Arch */}
-          <div className="hidden md:flex flex-col items-center justify-center">
+          <div className="hidden md:flex flex-col items-center justify-center shrink-0">
             <div className="font-gta-title text-3xl text-white gta-text-shadow-lg leading-none tracking-tight">
               2K26
             </div>
@@ -74,17 +74,17 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right HUD: Authentic CJ/S health, armor, cash, weapon box */}
-          <div className="flex items-center gap-2">
+          {/* Right HUD & Mobile Menu Toggle */}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <SanAndreasHUD />
             
-            {/* Mobile hamburger toggle (Sharp rectangular) */}
+            {/* Mobile hamburger toggle (Sharp rectangular, flat black & orange, min 44px touch target) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden ml-2 px-2.5 py-1.5 bg-gta-black text-gta-orange border-2 border-gta-black font-gta-condensed font-bold text-base uppercase"
+              className="md:hidden min-h-[44px] px-2.5 sm:px-3 py-2 bg-gta-black text-gta-orange border-2 border-gta-black active:bg-gta-brown font-gta-condensed font-extrabold text-sm sm:text-base uppercase tracking-wider select-none cursor-pointer flex items-center justify-center"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? '✕ CLOSE' : '☰ MENU'}
+              {mobileMenuOpen ? '[ ✕ CLOSE ]' : '[ ☰ MENU ]'}
             </button>
           </div>
         </div>
@@ -164,20 +164,26 @@ export default function Navbar() {
 
           {/* Mobile Collapsible Navigation */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-2 flex flex-col border-t border-gta-gray">
+            <div className="md:hidden py-1 flex flex-col bg-gta-black border-t-2 border-gta-orange">
               <MobileNavLink to="/" active={isActive('/')} onClick={handleNavClick}>[HOME]</MobileNavLink>
               <MobileNavLink to="/event" active={isActive('/event')} onClick={handleNavClick}>[EVENT]</MobileNavLink>
               <MobileNavLink to="/leaderboard" active={isActive('/leaderboard')} onClick={handleNavClick}>[LEADERBOARD]</MobileNavLink>
               <MobileNavLink to="/gallery" active={isActive('/gallery')} onClick={handleNavClick}>[GALLERY]</MobileNavLink>
               <MobileNavLink to="/about" active={isActive('/about')} onClick={handleNavClick}>[ABOUT]</MobileNavLink>
               {currentUser && role === 'PARTICIPANT' && (
-                <MobileNavLink to="/dashboard" active={isActive('/dashboard')} onClick={handleNavClick}>[MY DASHBOARD]</MobileNavLink>
+                <MobileNavLink to="/dashboard" active={isActive('/dashboard')} onClick={handleNavClick} highlight>
+                  [MY DASHBOARD]
+                </MobileNavLink>
               )}
               {currentUser && role === 'EVALUATOR' && (
-                <MobileNavLink to="/evaluator" active={isActive('/evaluator')} onClick={handleNavClick}>[EVALUATOR HQ]</MobileNavLink>
+                <MobileNavLink to="/evaluator" active={isActive('/evaluator')} onClick={handleNavClick} highlight>
+                  [EVALUATOR HQ]
+                </MobileNavLink>
               )}
               {currentUser && role === 'ADMIN' && (
-                <MobileNavLink to="/admin" active={isActive('/admin')} onClick={handleNavClick}>[ADMIN CONTROL]</MobileNavLink>
+                <MobileNavLink to="/admin" active={isActive('/admin')} onClick={handleNavClick} highlight>
+                  [ADMIN CONTROL]
+                </MobileNavLink>
               )}
               {currentUser ? (
                 <button
@@ -186,12 +192,14 @@ export default function Navbar() {
                     logout();
                     setMobileMenuOpen(false);
                   }}
-                  className="px-4 py-2 text-left font-gta-condensed font-bold text-gta-red uppercase text-base hover:bg-gta-brown"
+                  className="min-h-[44px] flex items-center px-4 py-2.5 text-left font-gta-condensed font-bold text-gta-red uppercase text-base sm:text-lg hover:bg-gta-brown active:bg-gta-brown border-b border-gta-dark cursor-pointer select-none"
                 >
                   [LOGOUT]
                 </button>
               ) : (
-                <MobileNavLink to="/login" active={isActive('/login')} onClick={handleNavClick}>[LOGIN / SIGN UP]</MobileNavLink>
+                <MobileNavLink to="/login" active={isActive('/login')} onClick={handleNavClick}>
+                  [LOGIN / SIGN UP]
+                </MobileNavLink>
               )}
             </div>
           )}
@@ -222,14 +230,20 @@ function NavLink({ to, active, onClick, highlight = false, children }) {
   );
 }
 
-function MobileNavLink({ to, active, onClick, children }) {
+function MobileNavLink({ to, active, onClick, highlight = false, children }) {
   return (
     <Link
       to={to}
       onClick={onClick}
       className={`
-        px-4 py-2 font-gta-condensed text-base font-bold uppercase tracking-wider
-        ${active ? 'bg-gta-orange text-gta-black' : 'text-gta-orange hover:bg-gta-brown'}
+        min-h-[44px] flex items-center px-4 py-2.5 font-gta-condensed text-base sm:text-lg font-bold uppercase tracking-wider
+        border-b border-gta-dark select-none
+        ${active 
+          ? 'bg-gta-orange text-gta-black font-extrabold' 
+          : highlight
+          ? 'text-gta-green hover:bg-gta-brown hover:text-white'
+          : 'text-gta-orange hover:bg-gta-brown hover:text-white'
+        }
       `}
     >
       {children}

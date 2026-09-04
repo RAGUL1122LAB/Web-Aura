@@ -123,22 +123,22 @@ export default function OnboardingModal({ isOpen, onComplete }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 select-none">
-      <div className="w-full max-w-lg bg-gta-beige border-4 border-gta-black gta-box-shadow-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/80 select-none">
+      <div className="w-full max-w-xl bg-gta-beige border-3 sm:border-4 border-gta-black gta-box-shadow-lg relative max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="bg-gta-black text-white p-4 border-b-3 border-gta-black flex items-center justify-between">
+        <div className="bg-gta-black text-white p-3.5 sm:p-4 border-b-3 border-gta-black flex items-center justify-between">
           <div>
             <span className="text-[10px] bg-gta-orange text-gta-black font-bold px-1.5 py-0.5 uppercase tracking-wider">
               NEW RECRUIT REGISTRATION
             </span>
-            <h3 className="font-gta-condensed text-2xl sm:text-3xl font-black uppercase text-white mt-0.5 leading-none">
+            <h3 className="font-gta-condensed text-xl sm:text-3xl font-black uppercase text-white mt-0.5 leading-none">
               PARTICIPANT ONBOARDING
             </h3>
           </div>
           <span className="text-2xl">🌴</span>
         </div>
 
-        <div className="p-5">
+        <div className="p-3.5 sm:p-5">
           {error && (
             <div className="p-3 mb-4 bg-red-100 border-2 border-gta-red text-gta-red font-gta-condensed text-sm font-bold uppercase tracking-wider">
               ⚠ {error}

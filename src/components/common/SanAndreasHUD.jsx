@@ -36,42 +36,42 @@ export default function SanAndreasHUD() {
       {/* HUD Bars & Cash Column */}
       <div className="flex flex-col items-end gap-1">
         {/* User / Squad Tag */}
-        <div className="flex items-center gap-1.5 font-gta-condensed text-base font-extrabold tracking-wider">
+        <div className="flex items-center gap-1.5 font-gta-condensed text-xs sm:text-base font-extrabold tracking-wider">
           <span className="text-white drop-shadow-[1px_1px_0px_#000]">{userTag}</span>
-          <span className="text-xs bg-gta-black px-1 text-gta-orange border border-gta-black">
+          <span className="text-[10px] sm:text-xs bg-gta-black px-1 text-gta-orange border border-gta-black">
             [{role}]
           </span>
         </div>
 
-        {/* Health Bar (Red) */}
-        <div className="flex items-center gap-1">
+        {/* Health Bar (Red) - Visible on tablet/desktop */}
+        <div className="hidden sm:flex items-center gap-1">
           <span className="text-[10px] font-bold text-gta-red font-gta-condensed">❤</span>
-          <div className="w-24 h-2.5 bg-black border border-black p-0.5">
+          <div className="w-20 sm:w-24 h-2.5 bg-black border border-black p-0.5">
             <div className="w-full h-full bg-gta-red"></div>
           </div>
         </div>
 
-        {/* Armor Bar (Blue/White) */}
-        <div className="flex items-center gap-1">
+        {/* Armor Bar (Blue/White) - Visible on tablet/desktop */}
+        <div className="hidden sm:flex items-center gap-1">
           <span className="text-[9px] font-bold text-gta-blue font-gta-condensed tracking-tighter">ARMOR</span>
-          <div className="w-24 h-2.5 bg-black border border-black p-0.5">
+          <div className="w-20 sm:w-24 h-2.5 bg-black border border-black p-0.5">
             <div className="w-4/5 h-full bg-gta-blue"></div>
           </div>
         </div>
 
         {/* Cash / Points Counter (Authentic SA Green Font) */}
-        <div className="font-gta-hud text-xl sm:text-2xl font-bold tracking-widest text-gta-green gta-text-shadow leading-none mt-0.5">
+        <div className="font-gta-hud text-lg sm:text-2xl font-bold tracking-wider sm:tracking-widest text-gta-green gta-text-shadow leading-none mt-0.5">
           {eventStatus === 'LIVE' ? '$2026.09$' : '$0010509$'}
         </div>
       </div>
 
       {/* Weapon / Fist Icon Box */}
-      <div className="relative w-14 h-14 bg-gta-black border-3 border-gta-black flex flex-col items-center justify-center p-1 group">
+      <div className="relative w-11 h-11 sm:w-14 sm:h-14 bg-gta-black border-2 sm:border-3 border-gta-black flex flex-col items-center justify-center p-1 group shrink-0">
         {/* Weapon / Code Icon graphic */}
-        <div className="text-gta-orange text-2xl font-black">
+        <div className="text-gta-orange text-xl sm:text-2xl font-black">
           {role === 'ADMIN' ? '⚡' : role === 'EVALUATOR' ? '⚖' : '👊'}
         </div>
-        <div className="text-[9px] font-mono font-bold text-white uppercase tracking-tighter">
+        <div className="text-[8px] sm:text-[9px] font-mono font-bold text-white uppercase tracking-tighter">
           {role === 'ADMIN' ? 'ROOT' : role === 'EVALUATOR' ? 'JURY' : 'DEV'}
         </div>
 

@@ -35,10 +35,10 @@ export default function AdminDashboard() {
       <div className="space-y-6 select-none">
         
         {/* Admin Header Banner */}
-        <div className="border-3 border-gta-black bg-gta-black text-white p-4 sm:p-6 gta-box-shadow">
+        <div className="border-3 border-gta-black bg-gta-black text-white p-3.5 sm:p-6 gta-box-shadow">
           <div className="flex items-center justify-between flex-wrap gap-3 border-b-2 border-gta-red pb-3 mb-3">
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs bg-gta-red text-white font-gta-condensed font-black px-2 py-0.5 uppercase tracking-widest">
                   ROOT LEVEL COMMAND
                 </span>
@@ -46,7 +46,7 @@ export default function AdminDashboard() {
                   ROOT: {currentUser?.email}
                 </span>
               </div>
-              <h1 className="font-gta-title text-3xl sm:text-5xl text-gta-orange gta-text-shadow leading-none tracking-tight mt-1">
+              <h1 className="font-gta-title text-2xl sm:text-4xl md:text-5xl text-gta-orange gta-text-shadow leading-tight sm:leading-none tracking-tight mt-1">
                 ADMIN CONTROL CENTER
               </h1>
             </div>
@@ -72,9 +72,9 @@ export default function AdminDashboard() {
         </div>
 
         {/* Event State Machine Controller Panel */}
-        <div className="border-3 border-gta-black bg-gta-beige p-4 gta-box-shadow">
-          <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between">
-            <h4 className="font-gta-condensed text-xl font-black uppercase text-white">
+        <div className="border-3 border-gta-black bg-gta-beige p-3.5 sm:p-4 gta-box-shadow">
+          <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
+            <h4 className="font-gta-condensed text-lg sm:text-xl font-black uppercase text-white">
               EVENT STATE MACHINE OVERRIDE
             </h4>
             <span className="text-xs font-mono text-gta-orange">
@@ -82,11 +82,12 @@ export default function AdminDashboard() {
             </span>
           </div>
 
-          <div className="p-4 flex items-center flex-wrap gap-3">
+          <div className="p-3 sm:p-4 flex items-center flex-wrap gap-2.5 sm:gap-3">
             <SanAndreasButton
               size="md"
               variant={eventStatus === 'PRE_EVENT' ? 'orange' : 'black'}
               onClick={() => handleStateChange('PRE_EVENT')}
+              className="w-full sm:w-auto justify-center"
             >
               PRE_EVENT (COUNTDOWN & LOCKED)
             </SanAndreasButton>
@@ -95,6 +96,7 @@ export default function AdminDashboard() {
               size="md"
               variant={eventStatus === 'LIVE' ? 'green' : 'black'}
               onClick={() => handleStateChange('LIVE')}
+              className="w-full sm:w-auto justify-center"
             >
               LIVE (COMPETITION ACTIVE)
             </SanAndreasButton>
@@ -103,6 +105,7 @@ export default function AdminDashboard() {
               size="md"
               variant={eventStatus === 'COMPLETED' ? 'tan' : 'black'}
               onClick={() => handleStateChange('COMPLETED')}
+              className="w-full sm:w-auto justify-center"
             >
               COMPLETED (SUBMISSIONS CLOSED)
             </SanAndreasButton>
@@ -111,6 +114,7 @@ export default function AdminDashboard() {
               size="md"
               variant={eventStatus === 'WINNER_REVEALED' ? 'red' : 'black'}
               onClick={() => handleStateChange('WINNER_REVEALED')}
+              className="w-full sm:w-auto justify-center"
             >
               WINNER_REVEALED (PODIUM BROADCAST)
             </SanAndreasButton>

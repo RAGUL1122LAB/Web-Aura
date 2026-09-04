@@ -32,7 +32,7 @@ export default function SanAndreasPanel({
   return (
     <div className={`border-3 border-gta-black gta-box-shadow ${bgStyles[variant]} ${className}`}>
       {title && (
-        <div className={`px-4 py-2.5 flex items-center justify-between flex-wrap gap-2 ${headerStyles[headerBg]}`}>
+        <div className={`px-3.5 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between flex-wrap gap-2 ${headerStyles[headerBg]}`}>
           <div>
             <h3 className="font-gta-condensed text-xl sm:text-2xl uppercase tracking-wider font-bold leading-none">
               {title}
@@ -50,7 +50,7 @@ export default function SanAndreasPanel({
           )}
         </div>
       )}
-      <div className={noPadding ? '' : 'p-4 sm:p-5'}>
+      <div className={noPadding ? '' : 'p-3.5 sm:p-5'}>
         {children}
       </div>
     </div>

@@ -27,11 +27,11 @@ export default function AboutPage() {
               <span className="text-xs bg-gta-orange text-gta-black font-gta-condensed font-black px-2 py-0.5 uppercase tracking-widest">
                 ORGANIZATIONAL CHARTER
               </span>
-              <h1 className="font-gta-title text-3xl sm:text-5xl text-white gta-text-shadow leading-none tracking-tight mt-1">
+              <h1 className="font-gta-title text-2xl sm:text-4xl md:text-5xl text-white gta-text-shadow leading-tight sm:leading-none tracking-tight mt-1">
                 ABOUT WEB AURA & TECH CLUB
               </h1>
             </div>
-            <span className="font-gta-hud text-xl text-gta-green font-bold">
+            <span className="font-gta-hud text-lg sm:text-xl text-gta-green font-bold">
               EST. 2026
             </span>
           </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
           </div>
           <a 
             href={`mailto:${EVENT_CONFIG.webmasterEmail}`}
-            className="px-4 py-2 bg-gta-orange text-gta-black font-gta-condensed font-black text-base uppercase border-2 border-black hover:bg-gta-orange-light"
+            className="w-full sm:w-auto min-h-[44px] flex items-center justify-center px-4 py-2 bg-gta-orange text-gta-black font-gta-condensed font-black text-base uppercase border-2 border-black hover:bg-gta-orange-light shrink-0"
           >
             [ CONTACT WEBMASTER ]
           </a>

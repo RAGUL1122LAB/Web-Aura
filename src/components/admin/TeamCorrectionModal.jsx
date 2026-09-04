@@ -48,9 +48,9 @@ export default function TeamCorrectionModal({ adminUid }) {
 
   return (
     <div className="border-3 border-gta-black bg-gta-beige p-4 gta-box-shadow select-none">
-      <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between">
+      <div className="bg-gta-black text-white p-3 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
         <div>
-          <h4 className="font-gta-condensed text-2xl font-black uppercase text-white leading-none">
+          <h4 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-white leading-none">
             TEAM ROSTER & ADMINISTRATIVE CORRECTIONS
           </h4>
           <p className="font-gta-condensed text-xs uppercase tracking-widest text-gta-orange mt-0.5">
@@ -62,13 +62,13 @@ export default function TeamCorrectionModal({ adminUid }) {
         </span>
       </div>
 
-      <div className="p-4 space-y-3">
+      <div className="p-3 sm:p-4 space-y-3">
         <p className="text-xs text-gta-brown font-semibold">
           Participant team memberships are fixed by design. Use this command table to review squads and perform authorized corrections.
         </p>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left font-gta-condensed border-collapse">
+        <div className="overflow-x-auto w-full">
+          <table className="w-full min-w-[500px] text-left font-gta-condensed border-collapse">
             <thead>
               <tr className="bg-gta-brown text-gta-tan-light text-base uppercase">
                 <th className="p-2">TEAM ID</th>
