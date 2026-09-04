@@ -49,10 +49,6 @@ export default function Navbar() {
             onClick={handleNavClick}
             className="flex items-center gap-1.5 sm:gap-2.5 group text-decoration-none min-w-0"
           >
-            {/* Stylized Palm Tree Silhouette */}
-            <div className="text-2xl sm:text-3xl md:text-4xl text-gta-black font-black leading-none drop-shadow-[2px_2px_0px_#000] shrink-0">
-              🌴
-            </div>
             <div className="flex flex-col justify-center min-w-0">
               <span className="font-gta-title text-xl sm:text-2xl md:text-3xl text-white tracking-normal leading-none gta-text-shadow-lg flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
                 <span>WEB</span>

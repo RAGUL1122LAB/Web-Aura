@@ -36,12 +36,12 @@ if (isFirebaseConfigured) {
     auth = getAuth(app);
     db = getFirestore(app);
     googleProvider = new GoogleAuthProvider();
-    console.log("⚡ Firebase Live Services Initialized Successfully");
+    console.log("[FIREBASE] Live Services Initialized Successfully");
   } catch (error) {
-    console.warn("⚠️ Firebase Live initialization failed, falling back to Local/Offline Mode:", error);
+    console.warn("[FIREBASE] Live initialization failed, falling back to Local/Offline Mode:", error);
   }
 } else {
-  console.log("🎮 WEB AURA 2K26 running in Local/Simulated Real-Time Mode (GTA: San Andreas Engine)");
+  console.log("[WEB AURA 2K26] Running in Local/Simulated Real-Time Mode (GTA: San Andreas Engine)");
 }
 
 export { app, auth, db, googleProvider };

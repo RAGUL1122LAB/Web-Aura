@@ -15,7 +15,9 @@ export default function DispatchNews() {
         {/* Banner with retro reporter icon & bold uppercase title */}
         <div className="bg-gta-black text-white px-3 py-2 border-b-3 border-gta-black flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl">📰</span>
+            <span className="text-[11px] bg-gta-orange text-gta-black font-gta-condensed font-black px-1.5 py-0.5 uppercase border border-black">
+              NEWS
+            </span>
             <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase tracking-wider text-white leading-none">
               WEB AURA DISPATCH
             </h3>

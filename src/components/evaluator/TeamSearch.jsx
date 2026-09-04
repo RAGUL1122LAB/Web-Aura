@@ -41,7 +41,7 @@ export default function TeamSearch({ onSelectTeam, selectedTeamId }) {
     <div className="border-3 border-gta-black bg-gta-beige p-4 gta-box-shadow select-none">
       <div className="bg-gta-black text-white px-3 py-2 border-b-2 border-gta-black mb-3 flex items-center justify-between">
         <h4 className="font-gta-condensed text-xl font-bold uppercase tracking-wider text-gta-orange">
-          🔍 SQUAD DISPATCH SCANNER
+          SQUAD DISPATCH SCANNER
         </h4>
         <span className="text-xs font-mono text-gta-tan">
           {results.length} REGISTERED TEAMS
@@ -98,7 +98,7 @@ export default function TeamSearch({ onSelectTeam, selectedTeamId }) {
         ) : (
           /* San Andreas Themed "TEAM NOT FOUND" State */
           <div className="p-6 bg-gta-charcoal border-2 border-gta-red text-center text-white">
-            <div className="text-3xl mb-1">🚨</div>
+            <div className="font-gta-condensed font-black text-xs text-gta-orange tracking-widest mb-1">[SEARCH FAILED]</div>
             <h5 className="font-gta-condensed text-2xl font-black uppercase text-gta-red tracking-wider">
               TEAM NOT FOUND
             </h5>

@@ -45,7 +45,7 @@ export default function SanAndreasHUD() {
 
         {/* Health Bar (Red) - Visible on tablet/desktop */}
         <div className="hidden sm:flex items-center gap-1">
-          <span className="text-[10px] font-bold text-gta-red font-gta-condensed">❤</span>
+          <span className="text-[9px] font-bold text-gta-red font-gta-condensed">HP</span>
           <div className="w-20 sm:w-24 h-2.5 bg-black border border-black p-0.5">
             <div className="w-full h-full bg-gta-red"></div>
           </div>
@@ -68,8 +68,8 @@ export default function SanAndreasHUD() {
       {/* Weapon / Fist Icon Box */}
       <div className="relative w-11 h-11 sm:w-14 sm:h-14 bg-gta-black border-2 sm:border-3 border-gta-black flex flex-col items-center justify-center p-1 group shrink-0">
         {/* Weapon / Code Icon graphic */}
-        <div className="text-gta-orange text-xl sm:text-2xl font-black">
-          {role === 'ADMIN' ? '⚡' : role === 'EVALUATOR' ? '⚖' : '👊'}
+        <div className="font-gta-condensed text-sm sm:text-base font-black text-gta-orange leading-none">
+          {role === 'ADMIN' ? 'SYS' : role === 'EVALUATOR' ? 'LAW' : 'SA'}
         </div>
         <div className="text-[8px] sm:text-[9px] font-mono font-bold text-white uppercase tracking-tighter">
           {role === 'ADMIN' ? 'ROOT' : role === 'EVALUATOR' ? 'JURY' : 'DEV'}
@@ -79,9 +79,9 @@ export default function SanAndreasHUD() {
         <button
           onClick={toggleSound}
           title={isMuted ? 'Unmute Sound FX' : 'Mute Sound FX'}
-          className="absolute -bottom-2 -left-2 bg-gta-orange text-gta-black border border-black text-[9px] px-1 font-bold hover:bg-gta-orange-light"
+          className="absolute -bottom-2 -left-2 bg-gta-orange text-gta-black border border-black text-[8px] px-1 font-bold font-mono hover:bg-gta-orange-light leading-tight"
         >
-          {isMuted ? '🔇' : '🔊'}
+          {isMuted ? 'OFF' : 'SFX'}
         </button>
       </div>
     </div>

@@ -46,7 +46,7 @@ export default function PodiumBanner() {
             <div className="bg-gta-black py-1 px-2 border border-gta-gray text-xs font-gta-condensed font-bold text-gta-gray-light uppercase mb-2">
               RUNNER UP • 2ND PLACE
             </div>
-            <div className="text-3xl mb-1">🥈</div>
+            <div className="font-gta-condensed font-black text-2xl text-gta-orange mb-1 tracking-widest">[ #2 RANK ]</div>
             <h3 className="font-gta-condensed text-xl sm:text-2xl font-black uppercase text-gta-orange">
               {secondPlace.teamName}
             </h3>
@@ -63,9 +63,9 @@ export default function PodiumBanner() {
         {firstPlace && (
           <div className="order-1 md:order-2 border-4 border-gta-yellow bg-gta-orange text-gta-black p-4 sm:p-6 text-center gta-box-shadow-lg mt-0 md:-mt-2">
             <div className="bg-gta-black py-1 px-3 border border-black text-xs sm:text-sm font-gta-condensed font-black text-gta-yellow uppercase mb-2">
-              👑 GRAND CHAMPION • 1ST PLACE
+              GRAND CHAMPION • 1ST PLACE
             </div>
-            <div className="text-3xl sm:text-4xl mb-1">🏆</div>
+            <div className="font-gta-condensed font-black text-3xl sm:text-4xl text-gta-black mb-1 tracking-widest">[ #1 CHAMPION ]</div>
             <h3 className="font-gta-title text-2xl sm:text-3xl md:text-4xl font-black uppercase text-gta-black leading-tight">
               {firstPlace.teamName}
             </h3>
@@ -87,7 +87,7 @@ export default function PodiumBanner() {
             <div className="bg-gta-black py-1 px-2 border border-gta-brown text-xs font-gta-condensed font-bold text-gta-tan uppercase mb-2">
               2ND RUNNER UP • 3RD PLACE
             </div>
-            <div className="text-3xl mb-1">🥉</div>
+            <div className="font-gta-condensed font-black text-2xl text-gta-tan-light mb-1 tracking-widest">[ #3 RANK ]</div>
             <h3 className="font-gta-condensed text-2xl font-black uppercase text-gta-tan-light">
               {thirdPlace.teamName}
             </h3>

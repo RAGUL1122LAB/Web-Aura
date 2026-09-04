@@ -86,7 +86,6 @@ export default function SignupPage() {
                 PARTICIPANT SIGN UP
               </h2>
             </div>
-            <span className="text-2xl">📝</span>
           </div>
 
           {/* Form */}

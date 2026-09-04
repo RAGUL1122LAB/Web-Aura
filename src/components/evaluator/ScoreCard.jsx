@@ -45,7 +45,7 @@ export default function ScoreCard({ team, evaluatorId, onScoreSaved }) {
   if (!team) {
     return (
       <div className="border-3 border-gta-black bg-gta-beige p-8 text-center gta-box-shadow select-none">
-        <div className="text-4xl mb-2">🎯</div>
+        <div className="font-gta-condensed font-black text-xs text-gta-orange tracking-widest mb-2">[AWAITING SELECTION]</div>
         <h4 className="font-gta-condensed text-2xl font-black uppercase text-gta-black">
           SELECT A SQUAD TO EVALUATE
         </h4>

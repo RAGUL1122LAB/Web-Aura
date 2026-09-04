@@ -163,7 +163,7 @@ export default function ParticipantDashboard() {
 
                 {/* Fixed Membership Notice (Strictly NO leave/switch buttons) */}
                 <div className="p-2.5 bg-gta-tan-light border border-gta-black text-[11px] font-semibold text-gta-brown leading-tight">
-                  <span className="font-bold text-gta-black">🔒 FIXED MEMBERSHIP:</span> Once assigned, team rosters are locked for competitive fairness. For administrative corrections, contact the Jury Webmaster.
+                  <span className="font-bold text-gta-black">[LOCKED] FIXED MEMBERSHIP:</span> Once assigned, team rosters are locked for competitive fairness. For administrative corrections, contact the Jury Webmaster.
                 </div>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function ParticipantDashboard() {
                 <div className="my-3 text-center">
                   {!isLive ? (
                     <div className="text-xs font-gta-condensed font-bold text-gta-brown bg-gta-beige p-2 border border-gta-black uppercase">
-                      🔒 PRE-EVENT LOCKED
+                      [LOCKED] PRE-EVENT
                     </div>
                   ) : settings.round1ScoreVisible ? (
                     <div className="font-gta-hud text-3xl font-black text-gta-black">
@@ -231,7 +231,7 @@ export default function ParticipantDashboard() {
                 <div className="my-3 text-center">
                   {!isLive ? (
                     <div className="text-xs font-gta-condensed font-bold text-gta-brown bg-gta-beige p-2 border border-gta-black uppercase">
-                      🔒 PRE-EVENT LOCKED
+                      [LOCKED] PRE-EVENT
                     </div>
                   ) : settings.round2ScoreVisible ? (
                     <div className="font-gta-hud text-3xl font-black text-gta-black">
@@ -266,7 +266,7 @@ export default function ParticipantDashboard() {
                 <div className="my-3 text-center">
                   {!isLive ? (
                     <div className="text-xs font-gta-condensed font-bold text-gta-tan bg-gta-charcoal p-2 border border-gta-gray uppercase">
-                      🔒 PRE-EVENT LOCKED
+                      [LOCKED] PRE-EVENT
                     </div>
                   ) : settings.totalScoreVisible ? (
                     <div className="font-gta-hud text-3xl font-black text-gta-green">

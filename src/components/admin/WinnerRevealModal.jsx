@@ -68,7 +68,7 @@ export default function WinnerRevealModal() {
         <div className="p-3 bg-white border-2 border-gta-black flex items-center justify-between flex-wrap gap-3">
           <div>
             <div className="font-gta-condensed text-lg font-black uppercase text-gta-black">
-              STATUS: {isWinnerRevealed ? '🏆 WINNERS ARE LIVE ON AIR' : '🔒 WINNERS UNREVEALED'}
+              STATUS: {isWinnerRevealed ? '[LIVE] WINNERS ARE LIVE ON AIR' : '[LOCKED] WINNERS UNREVEALED'}
             </div>
             <p className="text-xs text-gta-brown">
               {isWinnerRevealed 

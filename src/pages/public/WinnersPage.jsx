@@ -53,7 +53,7 @@ export default function WinnersPage() {
           </>
         ) : (
           <div className="border-3 border-gta-black bg-gta-beige p-8 text-center gta-box-shadow">
-            <div className="text-4xl mb-2">🔒</div>
+            <div className="font-gta-condensed font-black text-sm text-gta-orange tracking-widest mb-2">[CEREMONY LOCKED]</div>
             <h3 className="font-gta-condensed text-3xl font-black uppercase text-gta-black">
               PODIUM CEREMONY PENDING
             </h3>

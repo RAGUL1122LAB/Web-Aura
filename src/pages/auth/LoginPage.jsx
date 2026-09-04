@@ -94,7 +94,6 @@ export default function LoginPage() {
                 WEB AURA LOGIN
               </h2>
             </div>
-            <span className="text-2xl">🔐</span>
           </div>
 
           {/* Form */}

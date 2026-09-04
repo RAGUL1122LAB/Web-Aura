@@ -46,13 +46,6 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Layer 2: Existing Decorative Artwork (Silhouetted Palms in Middle Layer) */}
-        <div className="absolute inset-0 z-[1] flex items-end justify-between px-6 pointer-events-none">
-          {/* Silhouetted Palms */}
-          <div className="text-6xl sm:text-8xl select-none opacity-40 -mb-2">🌴</div>
-          <div className="text-5xl sm:text-7xl select-none opacity-30 -mb-2">🌴</div>
-          <div className="text-7xl sm:text-9xl select-none opacity-40 -mb-4">🌴</div>
-        </div>
 
         {/* Central Bold Banner Typography */}
         <div className="relative z-10">

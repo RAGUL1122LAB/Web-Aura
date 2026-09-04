@@ -25,7 +25,6 @@ export default function LeaderboardTable({ showScoresOverride = false }) {
       {/* Table Title Banner */}
       <div className="bg-gta-black text-white px-4 py-3 border-b-3 border-gta-black flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🏆</span>
           <div>
             <h3 className="font-gta-condensed text-2xl sm:text-3xl font-black uppercase tracking-wider text-white leading-none">
               OFFICIAL SQUAD LEADERBOARD
@@ -44,7 +43,7 @@ export default function LeaderboardTable({ showScoresOverride = false }) {
             </SanAndreasBadge>
           ) : (
             <SanAndreasBadge variant="red" size="md">
-              🔒 PRE-EVENT LOCKED
+              [LOCKED] PRE-EVENT
             </SanAndreasBadge>
           )}
         </div>

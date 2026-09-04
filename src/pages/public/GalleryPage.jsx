@@ -50,7 +50,7 @@ export default function GalleryPage() {
                 <div className="relative w-full h-48 bg-gta-brown border-2 border-gta-black overflow-hidden flex items-center justify-center p-3 text-center">
                   {/* Visual Retro Hackathon Silhouette Representation */}
                   <div className="font-mono text-xs text-gta-tan space-y-1">
-                    <div className="text-3xl text-gta-orange">💻</div>
+                    <div className="font-gta-condensed text-xs text-gta-orange font-black tracking-widest">[MEDIA ARCHIVE]</div>
                     <div className="font-gta-condensed text-lg uppercase font-black text-white">
                       {item.title}
                     </div>

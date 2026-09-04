@@ -135,7 +135,6 @@ export default function OnboardingModal({ isOpen, onComplete }) {
               PARTICIPANT ONBOARDING
             </h3>
           </div>
-          <span className="text-2xl">🌴</span>
         </div>
 
         <div className="p-3.5 sm:p-5">
@@ -216,7 +215,9 @@ export default function OnboardingModal({ isOpen, onComplete }) {
                   onClick={() => { soundEffects.playClick(); setStep('CREATE_TEAM'); }}
                   className="p-5 border-3 border-gta-black bg-white hover:bg-gta-tan-light cursor-pointer text-left gta-box-shadow-sm transition-none"
                 >
-                  <div className="text-3xl mb-2">⭐</div>
+                  <span className="text-[10px] bg-gta-black text-gta-orange font-gta-condensed font-black px-2 py-0.5 uppercase tracking-wider mb-2 inline-block">
+                    SQUAD FOUNDER
+                  </span>
                   <h5 className="font-gta-condensed text-xl font-black uppercase text-gta-black">
                     CREATE NEW TEAM
                   </h5>
@@ -235,7 +236,9 @@ export default function OnboardingModal({ isOpen, onComplete }) {
                   onClick={() => { soundEffects.playClick(); setStep('JOIN_TEAM'); }}
                   className="p-5 border-3 border-gta-black bg-white hover:bg-gta-tan-light cursor-pointer text-left gta-box-shadow-sm transition-none"
                 >
-                  <div className="text-3xl mb-2">🤝</div>
+                  <span className="text-[10px] bg-gta-orange text-gta-black font-gta-condensed font-black px-2 py-0.5 uppercase tracking-wider mb-2 inline-block border border-black">
+                    ROSTER RECRUIT
+                  </span>
                   <h5 className="font-gta-condensed text-xl font-black uppercase text-gta-black">
                     JOIN EXISTING TEAM
                   </h5>

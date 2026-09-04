@@ -43,7 +43,7 @@ export default function CountdownTimer() {
     return (
       <div className="bg-gta-green border-3 border-gta-black px-4 py-2 flex items-center justify-between gap-4 gta-box-shadow select-none">
         <div className="flex items-center gap-2">
-          <span className="text-xl">⚡</span>
+          <span className="font-gta-condensed font-black text-xl text-gta-black">●</span>
           <span className="font-gta-condensed font-black text-2xl uppercase tracking-wider text-gta-black">
             STATUS: EVENT IS LIVE!
           </span>
@@ -59,7 +59,6 @@ export default function CountdownTimer() {
     <div className="bg-gta-black border-3 border-gta-orange p-3 sm:p-4 text-white gta-box-shadow select-none">
       <div className="flex items-center justify-between flex-wrap gap-2 border-b-2 border-gta-brown pb-2 mb-3">
         <div className="flex items-center gap-2 min-w-0">
-          <span className="text-gta-orange font-bold text-base sm:text-lg shrink-0">⏳</span>
           <h4 className="font-gta-condensed text-base sm:text-xl font-bold uppercase tracking-wider text-gta-orange leading-tight">
             MISSION CLOCK • COUNTDOWN TO KICKOFF
           </h4>
