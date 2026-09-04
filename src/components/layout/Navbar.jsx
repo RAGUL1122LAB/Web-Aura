@@ -43,21 +43,18 @@ export default function Navbar() {
 
         {/* Layer 3: Foreground Header Content (Branding, Center Arch & San Andreas HUD) */}
         <div className="relative z-10 max-w-6xl mx-auto px-2.5 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
-          {/* Left Branding: WEB AURA with Palm Silhouette in San Andreas Style */}
+          {/* Left Branding: WEB AURA — SAN ANDREAS EDITION (Authentic Reference Typography) */}
           <Link 
             to="/" 
             onClick={handleNavClick}
-            className="flex items-center gap-1.5 sm:gap-2.5 group text-decoration-none min-w-0"
+            className="flex items-center group text-decoration-none min-w-0"
+            aria-label="WEB AURA — SAN ANDREAS EDITION Home"
           >
-            <div className="flex flex-col justify-center min-w-0">
-              <span className="font-gta-title text-xl sm:text-2xl md:text-3xl text-white tracking-normal leading-none gta-text-shadow-lg flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
-                <span>WEB</span>
-                <span>AURA</span>
-              </span>
-              <span className="font-diploma text-xs sm:text-sm md:text-lg text-white tracking-wider leading-none gta-text-shadow mt-0.5 sm:mt-1 whitespace-nowrap">
-                San Andreas Edition
-              </span>
-            </div>
+            <img 
+              src="/images/web_aura_branding_reference.png" 
+              alt="WEB AURA — SAN ANDREAS EDITION" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain select-none transition-none"
+            />
           </Link>
 
           {/* Center Logo: 2K26 Arch */}
