@@ -34,8 +34,20 @@ export default function HeroSection() {
 
       {/* Hero Visual Banner (Classic Early-2000s San Andreas Crew Sunset Banner) */}
       <div className="relative w-full min-h-[18rem] sm:min-h-[20rem] h-auto bg-gta-orange overflow-hidden border-b-3 border-gta-black flex flex-col justify-between p-3.5 sm:p-6 gap-4">
-        {/* Retro City Sky Backdrop with San Andreas Palm Silhouettes & Streetlamps */}
-        <div className="absolute inset-0 bg-[#E8771A] flex items-end justify-between px-6 pointer-events-none opacity-90">
+        {/* Layer 1: Clear Wall Poster Image (100% Opacity, Original Colors, No Overlay, No Gradient) */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none"
+          aria-hidden="true"
+        >
+          <img 
+            src="/images/hero_wall_poster.png" 
+            alt="GTA San Andreas Hero Wall Poster"
+            className="w-full h-full object-cover object-center opacity-100"
+          />
+        </div>
+
+        {/* Layer 2: Existing Decorative Artwork (Silhouetted Palms in Middle Layer) */}
+        <div className="absolute inset-0 z-[1] flex items-end justify-between px-6 pointer-events-none">
           {/* Silhouetted Palms */}
           <div className="text-6xl sm:text-8xl select-none opacity-40 -mb-2">🌴</div>
           <div className="text-5xl sm:text-7xl select-none opacity-30 -mb-2">🌴</div>
