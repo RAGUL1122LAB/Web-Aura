@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================================
+   ZERO ROUNDED CORNERS & ZERO GRADIENTS GLOBAL POLICY
+   Strict GTA: San Andreas 2004 PS2/PC Aesthetic
+   ========================================================================= */
+
+*, *::before, *::after {
+  border-radius: 0px !important;
+}
+
+:root {
+  --color-gta-orange: #EA7A00;
+  --color-gta-orange-dark: #C45E00;
+  --color-gta-orange-light: #F58A07;
+  --color-gta-brown: #2B1810;
+  --color-gta-brown-dark: #1A0E0A;
+  --color-gta-tan: #D4B28C;
+  --color-gta-tan-light: #F3E5AB;
+  --color-gta-beige: #F5EDE0;
+  --color-gta-cream: #FFF8EE;
+  --color-gta-black: #000000;
+  --color-gta-dark: #0C0C0C;
+  --color-gta-charcoal: #181818;
+  --color-gta-green: #2ECC71;
+  --color-gta-red: #E74C3C;
+  --color-gta-blue: #3498DB;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #000000;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================================================================
+   AUTHENTIC GTA: SAN ANDREAS GLOBAL GAME CURSOR — ALL PAGES & COMPONENTS
+   ========================================================================= */
+
+html, body, #root {
+  cursor: url('/cursors/gta-cursor.png') 0 0, url('/cursors/gta-sa-cursor.svg') 0 0, auto !important;
+}
+
+/* Default non-interactive elements inherit the custom game cursor */
+div, p, span, h1, h2, h3, h4, h5, h6, section, main, header, footer, nav, article, aside, table, tr, td, th, ul, ol, li, img {
+  cursor: inherit;
+}
+
+/* Interactive elements: buttons, links, clickable cards, navigation, controls */
+a, button, [role="button"], 
+input[type="button"], input[type="submit"], input[type="reset"], 
+select, summary, label[for], 
+[tabindex]:not([tabindex="-1"]), 
+.cursor-pointer, [class*="cursor-pointer"],
+[onClick], [onclick] {
+  cursor: url('/cursors/gta-pointer.png') 0 0, url('/cursors/gta-sa-pointer.svg') 0 0, pointer !important;
+}
+
+/* Children inside interactive elements inherit the pointer state */
+a *, button *, [role="button"] *, .cursor-pointer * {
+  cursor: inherit !important;
+}
+
+/* Text editing inputs: preserve native text cursor for ease of typing */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], 
+input[type="number"], input[type="tel"], input[type="url"], 
+textarea, [contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* Disabled buttons and controls */
+button:disabled, input:disabled, [aria-disabled="true"], .cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+/* Touch devices: preserve standard touch interaction without forcing mouse pointer */
+@media (pointer: coarse) {
+  html, body, #root, a, button, input, textarea, select {
+    cursor: auto !important;
+  }
+}
+
+/* Custom Scrollbar - Retro 2004 Style */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-left: 2px solid #2B1810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EA7A00;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F58A07;
+}
+
+/* =========================================================================
+   AUTHENTIC GTA: SAN ANDREAS CUSTOM FONTS (@font-face)
+   ========================================================================= */
+
+@font-face {
+  font-family: 'Pricedown';
+  src: url('/fonts/pricedown.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Diploma';
+  src: url('/fonts/Diploma.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldEnglish';
+  src: url('/fonts/OldEnglish.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GTA San Andreas Typography Classes */
+.font-gta-title {
+  font-family: 'Pricedown', 'Changa One', 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.font-gta-sa {
+  font-family: 'Diploma', 'OldEnglish', serif;
+}
+
+.font-pricedown {
+  font-family: 'Pricedown', 'Impact', sans-serif;
+}
+
+.font-diploma {
+  font-family: 'Diploma', 'OldEnglish', serif;
+}
+
+.font-gta-condensed {
+  font-family: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-gta-hud {
+  font-family: 'VT323', 'Share Tech Mono', 'Courier New', monospace;
+}
+
+/* Solid Black Outline Text Shadows (NO BLURS, NO GRADIENTS) */
+.gta-text-shadow {
+  text-shadow: 2px 2px 0px #000000, -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000;
+}
+
+.gta-text-shadow-lg {
+  text-shadow: 3px 3px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000;
+}
+
+.gta-text-shadow-orange {
+  text-shadow: 2px 2px 0px #2B1810;
+}
+
+/* Retro Pixel/Sharp Box Shadows (Solid Colors Only) */
+.gta-box-shadow {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.gta-box-shadow-sm {
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.gta-box-shadow-orange {
+  box-shadow: 4px 4px 0px #C45E00;
+}
+
+/* Solid Panel Outlines */
+.gta-border {
+  border: 3px solid #000000;
+}
+
+.gta-border-thin {
+  border: 2px solid #000000;
+}
+
+.gta-border-thick {
+  border: 4px solid #000000;
+}
+
+/* Support for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

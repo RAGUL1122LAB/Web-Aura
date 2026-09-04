@@ -1,0 +1,91 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && (
+        getUserData().role == 'ADMIN' ||
+        request.auth.token.role == 'ADMIN'
+      );
+    }
+    
+    function isEvaluator() {
+      return isAuthenticated() && (
+        getUserData().role == 'EVALUATOR' ||
+        request.auth.token.role == 'EVALUATOR' ||
+        isAdmin()
+      );
+    }
+
+    // USERS COLLECTION
+    // Users can read their own doc. Only Admin can modify roles.
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && request.auth.uid == userId 
+                    && request.resource.data.role == 'PARTICIPANT';
+      allow update: if isAuthenticated() && (
+        isAdmin() || (
+          request.auth.uid == userId && 
+          request.resource.data.role == resource.data.role // Cannot elevate own role!
+        )
+      );
+      allow delete: if isAdmin();
+    }
+
+    // TEAMS COLLECTION
+    // Participants can create/join a team. Only Admin can correct/delete.
+    match /teams/{teamId} {
+      allow read: if true; // Public read for leaderboard/search
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && (
+        isAdmin() || (
+          // Allowing participant to add themselves to memberUids during join
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['memberUids', 'members', 'memberCount', 'updatedAt'])
+        )
+      );
+      allow delete: if isAdmin();
+    }
+
+    // EVALUATIONS COLLECTION
+    // Only evaluators and admin can create/update scores. Participants CANNOT write.
+    match /evaluations/{evalId} {
+      allow read: if true;
+      allow create, update: if isEvaluator();
+      allow delete: if isAdmin();
+    }
+
+    // ROUNDS COLLECTION
+    match /rounds/{roundId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // EVENT SETTINGS (Global authoritative state)
+    // Only Admin can write. All can read.
+    match /eventSettings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // WINNERS COLLECTION
+    // Only Admin can write. All can read.
+    match /winners/{winnerId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // AUDIT LOGS
+    match /teamChangeAudit/{auditId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
