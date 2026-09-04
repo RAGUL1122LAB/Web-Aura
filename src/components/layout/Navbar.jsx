@@ -53,7 +53,7 @@ export default function Navbar() {
             <img 
               src="/images/web_aura_branding_reference.png" 
               alt="WEB AURA — SAN ANDREAS EDITION" 
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain select-none transition-none"
+              className="h-11 sm:h-16 md:h-20 lg:h-24 max-w-[40vw] sm:max-w-none w-auto object-contain select-none transition-none drop-shadow-[2px_2px_0px_#000]"
             />
           </Link>
 
